@@ -1,11 +1,6 @@
-import {
-  Form as FormikForm,
-  Field as FormicField,
-  ErrorMessage as FormikError,
-} from 'formik';
 import styled from 'styled-components';
 
-export const Form = styled(FormikForm)`
+export const StyledForm = styled.div`
   width: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -18,21 +13,27 @@ export const Form = styled(FormikForm)`
   box-shadow: ${p => p.theme.shadows.formShadow};
 `;
 
-export const Field = styled(FormicField)`
+export const StyledField = styled.input`
   border-radius: ${p => p.theme.radii.sd};
   border: 1px solid ${p => p.theme.colors.borderColor};
+  outline: 0;
+  outline-offset: 0;
 `;
 
-export const FormInputGroup = styled.div`
+export const FormInputGroup = styled.label`
   display: flex;
   justify-content: space-between;
 `;
 
-export const InputErrorGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+export const Btn = styled.button`
+  border-radius: ${p => p.theme.radii.sd};
+  border: 1px solid ${p => p.theme.colors.borderColor};
+  cursor: pointer;
+  box-shadow: ${p => p.theme.shadows.btnShadow};
+  color: inherit;
 
-export const ErrorMessage = styled(FormikError)`
-  color: ${p => p.theme.colors.errorColor};
+  &:hover {
+    box-shadow: ${p => p.theme.shadows.btnPushShadow};
+    color: ${p => p.theme.colors.accentTextColor};
+  }
 `;

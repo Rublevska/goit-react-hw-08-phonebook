@@ -9,7 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: ${p => p.theme.colors.mainBgColor};
+  background: url('https://images.all-free-download.com/images/graphicwebp/blue_abstract_background_310971.webp') no-repeat center center fixed;
+  background-size: cover;
   color: ${p => p.theme.colors.mainTextColor};
 }
 
@@ -28,8 +29,18 @@ p {
   margin: 0;
 }
 
-button:active, button:focus {
+button{
+  border-radius: ${p => p.theme.radii.sd};
+  border: 1px solid ${p => p.theme.colors.borderColor};
+  cursor: pointer;
+  box-shadow: ${p => p.theme.shadows.btnShadow};
+  color: inherit;
+};
+
+button:active, button:focus, button:hover {
   outline: none;
+  box-shadow: ${p => p.theme.shadows.btnPushShadow};
+    color: ${p => p.theme.colors.accentTextColor};
 }
 button::-moz-focus-inner {
   border: 0;
@@ -38,4 +49,16 @@ button::-moz-focus-inner {
 ul {
   list-style: none;
 }
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: ${p => p.theme.colors.mainTextColor}; 
+}
+
+a:hover {
+      color: ${p => p.theme.colors.accentTextColor}; 
+      font-weight: 700;
+    } 
+
 `;

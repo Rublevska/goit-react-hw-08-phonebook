@@ -1,7 +1,8 @@
 export const theme = {
   colors: {
     mainBgColor: '#ffffff',
-    mainFormColor: '#f0e9f0',
+    mainFormColor: '#e5f2f7',
+    //#f0e9f0',
     mainTextColor: '#2b8ac8',
     accentTextColor: '#2474a8',
     errorTextColor: '#900C3F',

@@ -6,6 +6,10 @@ export const ListOfContacts = styled.ul`
   margin-right: auto;
   box-shadow: ${p => p.theme.shadows.formShadow};
   border-radius: ${p => p.theme.radii.sd};
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: ${p => p.theme.spasing(7)};
 `;
 
 export const ContactWrapper = styled.div`
@@ -15,17 +19,5 @@ export const ContactWrapper = styled.div`
 
 export const ContactItem = styled.li`
   padding-bottom: ${p => p.theme.spasing(4)};
-`;
-
-export const DeleteBtn = styled.button`
-  border-radius: ${p => p.theme.radii.sd};
-  border: 1px solid ${p => p.theme.colors.borderColor};
-  cursor: pointer;
-  box-shadow: ${p => p.theme.shadows.btnShadow};
-  color: inherit;
-
-  &:hover {
-    box-shadow: ${p => p.theme.shadows.btnPushShadow};
-    color: ${p => p.theme.colors.accentTextColor};
-  }
+  flex-basis: calc((100% - 2 * ${p => p.theme.spasing(7)}) / 3);
 `;

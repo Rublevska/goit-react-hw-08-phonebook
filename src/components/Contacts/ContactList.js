@@ -3,7 +3,6 @@ import { visibleContacts } from '../../redux/selectors';
 import {
   ListOfContacts,
   ContactItem,
-  DeleteBtn,
   ContactWrapper,
 } from './ContactList.styled';
 import { deleteContact } from '../../redux/operations';
@@ -23,15 +22,15 @@ export const ContactList = () => {
           <ContactItem key={contact.id}>
             <ContactWrapper>
               <p>
-                {contact.name}: {contact.phone}
+                {contact.name}: {contact.number}
               </p>
-              <DeleteBtn
+              <button
                 onClick={() => {
                   handleDelete(contact.id);
                 }}
               >
                 Delete
-              </DeleteBtn>
+              </button>
             </ContactWrapper>
           </ContactItem>
         );

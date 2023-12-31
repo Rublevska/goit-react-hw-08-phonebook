@@ -6,7 +6,6 @@ import {
   Form,
   FormInputGroup,
   Field,
-  AddContactBtn,
   ErrorMessage,
   InputErrorGroup,
 } from './NewPhoneForm.styled';
@@ -33,7 +32,7 @@ export const FormContact = () => {
       .min(2, 'Too Short!')
       .max(50, 'Too Long!')
       .required('Required'),
-    phone: Yup.string()
+    number: Yup.string()
       .min(7, 'Too Short!')
       .max(12, 'Too Long!')
       .required('Required'),
@@ -44,7 +43,7 @@ export const FormContact = () => {
       <Formik
         initialValues={{
           name: '',
-          phone: '',
+          number: '',
         }}
         validationSchema={PhoneValidateSchema}
         onSubmit={(values, actions) => {
@@ -62,14 +61,14 @@ export const FormContact = () => {
           </FormInputGroup>
 
           <FormInputGroup>
-            <label htmlFor="phone">Number</label>
+            <label htmlFor="number">Number</label>
             <InputErrorGroup>
-              <Field id="phone" name="phone" placeholder="1234567" />
-              <ErrorMessage name="phone" component="span" />
+              <Field id="number" name="number" placeholder="1234567" />
+              <ErrorMessage name="number" component="span" />
             </InputErrorGroup>
           </FormInputGroup>
 
-          <AddContactBtn type="submit">Add contact</AddContactBtn>
+          <button type="submit">Add contact</button>
         </Form>
       </Formik>
     </div>

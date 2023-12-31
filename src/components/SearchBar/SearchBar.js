@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { FilterField } from './SearchBar.styled';
+import { Bar, FilterField } from './SearchBar.styled';
 import { changeFilter } from '../../redux/filterSlise';
 
 export const SearchBar = ({ filter }) => {
@@ -10,7 +10,7 @@ export const SearchBar = ({ filter }) => {
   };
 
   return (
-    <label htmlFor="filter">
+    <Bar htmlFor="filter">
       Find contacts by name
       <FilterField
         type="text"
@@ -20,6 +20,6 @@ export const SearchBar = ({ filter }) => {
         }}
         name="filter"
       />
-    </label>
+    </Bar>
   );
 };
